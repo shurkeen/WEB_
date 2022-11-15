@@ -1,0 +1,20 @@
+{% extends "inc/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<h2>Tag: {{ tmp_tag }}</h2>
+
+{% for question in questions %}
+    {% for tag in question.tags %}
+        {% if tag == tmp_tag %} 
+            {% include 'inc/question_item.html' %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
+
+{% include 'inc/paginator.html' %}
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "inc/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<h2>New Question</h2>
+<form action="#" method="post" class="feedback-form ms-3">
+    <input type="hidden" name="nospam" id="nospam">
+
+    <div class="mb-3">
+        <label for="name" class="form-label"><h6>Title</h6></label>
+        <input type="text" class="form-control" name="name" id="name" maxlength="200">
+        <h6 class="my-invalid-feedback">Maximum title length 100 characters</h6>
+        <h6 class="my-invalid-feedback">Minimum title length 15 characters</h6>
+    </div>
+
+    <div class="mb-3">
+        <label for="message" class="form-label"><h6>Text</h6></label>
+        <textarea class="form-control" name="message" id="message" rows="15" maxlength="15000"></textarea>
+        <h6 class="my-invalid-feedback">Maximum text length 10000 characters</h6>
+        <h6 class="my-invalid-feedback">Minimum text length 30 characters</h6>
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label"><h6>Tags</h6></label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Enter no more than 3 tags">
+        <h6 class="my-invalid-feedback">You entered more than 3 tags</h6>
+    </div>
+
+    <div class="mb-3">
+        <input type="submit" class="btn btn-primary" name="feedback-form" value="ASK!">
+    </div>
+</form>
+
+{% endblock %}

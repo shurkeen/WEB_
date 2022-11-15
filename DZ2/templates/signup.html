@@ -1,0 +1,49 @@
+{% extends "inc/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<h2 class="mb-3">Registration</h2>
+<div class="registration ms-3">
+    <form class="mb-4">
+        <div class="mb-3">
+            <label for="exampleInputLogin1" class="form-label"><h6>Login</h6></label>
+            <input class="form-control" id="exampleInputLogin1" placeholder="Enter your login there">
+            <h6 class="my-invalid-feedback">Sorry, but there is no user with this login</h6>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"><h6>Email</h6></label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="shurken@mail.ru">
+            <h6 class="my-invalid-feedback">Sorry, this email account is already registered</h6>
+            <h6 class="my-invalid-feedback">This mail does not exist!</h6>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputNickName1" class="form-label"><h6>NickName</h6></label>
+            <input class="form-control" id="exampleInputNickName1" placeholder="Shurken">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"><h6>Password</h6></label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="**********">
+            <h6 class="my-invalid-feedback">Sorry, wrong Password!</h6>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPasswordAgain1" class="form-label"><h6>Repeat password</h6></label>
+            <input type="password" class="form-control" id="exampleInputPasswordAgain1" placeholder="**********">
+            <h6 class="my-invalid-feedback">The passwords you entered do not match!</h6>
+        </div>
+
+        <div class="mb-3">
+            <label for="customFile" class="form-label"><h6>Upload avatar</h6></label>
+            <input type="file" class="form-control" id="customFile" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Register!</button>
+    </form>
+</div>
+
+{% endblock %}

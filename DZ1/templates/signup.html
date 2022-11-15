@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sticky Footer Navbar Template · Bootstrap v5.2</title>
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../static/css/style.css" rel="stylesheet"> 
+    
+</head>
+
+
+
+<body class="d-flex flex-column h-100">
+
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="#">Heap Overflow</a>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <button class="btn btn-outline-success" id="no-wrap" type="submit">Ask new question</button>
+
+                    <form class="d-flex form_search me-auto" role="search">
+                        <input class="form-control me-2" type="search" size=85 placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                     </form>
+
+                     <div class="my-userblock" id="no-wrap" >
+                        <a href="#" style="margin-right:10px;">log in</a>
+                        <a href="#">register</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    <h2 class="mb-3">Registration</h2>
+                    <div class="registration ms-3">
+                        <form class="mb-4">
+                            <div class="mb-3">
+                                <label for="exampleInputLogin1" class="form-label"><h6>Login</h6></label>
+                                <input class="form-control" id="exampleInputLogin1" placeholder="Enter your login there">
+                                <h6 class="my-invalid-feedback">Sorry, but there is no user with this login</h6>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label"><h6>Email</h6></label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="shurken@mail.ru">
+                                <h6 class="my-invalid-feedback">Sorry, this email account is already registered</h6>
+                                <h6 class="my-invalid-feedback">This mail does not exist!</h6>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleInputNickName1" class="form-label"><h6>NickName</h6></label>
+                                <input class="form-control" id="exampleInputNickName1" placeholder="Shurken">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label"><h6>Password</h6></label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="**********">
+                                <h6 class="my-invalid-feedback">Sorry, wrong Password!</h6>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleInputPasswordAgain1" class="form-label"><h6>Repeat password</h6></label>
+                                <input type="password" class="form-control" id="exampleInputPasswordAgain1" placeholder="**********">
+                                <h6 class="my-invalid-feedback">The passwords you entered do not match!</h6>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="customFile" class="form-label"><h6>Upload avatar</h6></label>
+                                <input type="file" class="form-control" id="customFile" />
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Register!</button>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="col-3 mt-5">
+                    <div class="popular-tags">
+                        <h2>Popular Tags</h2>
+                        <ul>
+                            <li>Первый тег</li>
+                            <li>Второй тег</li>
+                            <li>Третий тег</li>
+                        </ul>
+                    </div>
+                    <div class="best-members">
+                        <h2>Best Members</h2>
+                        <ul>
+                            <li>tourist</li>
+                            <li>jiangly</li>
+                            <li>ksun48</li>
+                            <li>Um_nik</li>
+                            <li>Benq</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>

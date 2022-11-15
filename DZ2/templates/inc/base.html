@@ -1,0 +1,116 @@
+<!doctype html>
+
+{% load static %}
+
+<html lang="en" class="h-100">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sticky Footer Navbar Template · Bootstrap v5.2</title>
+
+    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+    <link href="{% static "css/style.css" %}" rel="stylesheet"> 
+    
+</head>
+
+
+<body class="d-flex flex-column h-100">
+
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="{% url 'index' %}">Heap Overflow</a>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <a class="btn btn-outline-success" id="no-wrap" href="{% url 'ask' %}">Ask new question</a>
+
+                    <form class="d-flex form_search me-auto" role="search">
+                        <input class="form-control me-2" type="search" size=85 placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+
+                    <div class="my-userblock">
+                        <div class="row">
+
+                            {% if False %}
+
+                                <div class="col-4">
+                                    <div class="avatar">
+                                        <img src="{% static "img/img1.jpg" %}" alt="" />
+                                    </div>
+                                </div>
+                                
+                                <div class="col-8" id="no-wrap">
+                                    <p>NAME</p>
+                                    <a href="#" style="margin-right:10px;">settings</a>
+                                    <a href="#">log out</a>
+                                </div>
+
+                            {% else %}
+                                
+                                <div id="no-wrap">
+                                    <a href="{% url 'login' %}" style="margin-right:10px;">log in</a>
+                                    <a href="{% url 'signup' %}">register</a>
+                                </div>
+
+                            {% endif %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    
+                    {% block content %}
+                    {% endblock %}
+
+                </div>
+                <div class="col-3 mt-5">
+                    <div class="popular-tags">
+                        <h2>Popular Tags</h2>
+                        <ul>
+                            <li>Первый тег</li>
+                            <li>Второй тег</li>
+                            <li>Третий тег</li>
+                        </ul>
+                    </div>
+                    <div class="best-members">
+                        <h2>Best Members</h2>
+                        <ul>
+                            <li>tourist</li>
+                            <li>jiangly</li>
+                            <li>ksun48</li>
+                            <li>Um_nik</li>
+                            <li>Benq</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+    </footer>
+
+
+    <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

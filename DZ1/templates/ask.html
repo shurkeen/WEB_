@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sticky Footer Navbar Template · Bootstrap v5.2</title>
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../static/css/style.css" rel="stylesheet"> 
+    
+</head>
+
+
+
+<body class="d-flex flex-column h-100">
+
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="#">Heap Overflow</a>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <button class="btn btn-outline-success" id="no-wrap" type="submit">Ask new question</button>
+
+                    <form class="d-flex form_search me-auto" role="search">
+                        <input class="form-control me-2" type="search" size=85 placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+
+                    <div class="my-userblock">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="avatar">
+                                    <img src="../static/img/img1.jpg" alt="" />
+                                </div>
+                            </div>
+                            
+                            <div class="col-8" id="no-wrap" >
+                                <p>NAME</p>
+                                <a href="#" style="margin-right:10px;">settings</a>
+                                <a href="#">log out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    <h2>New Question</h2>
+                    <form action="#" method="post" class="feedback-form ms-3">
+                        <input type="hidden" name="nospam" id="nospam">
+
+                        <div class="mb-3">
+                          <label for="name" class="form-label"><h6>Title</h6></label>
+                          <input type="text" class="form-control" name="name" id="name" maxlength="200">
+                          <h6 class="my-invalid-feedback">Maximum title length 100 characters</h6>
+                          <h6 class="my-invalid-feedback">Minimum title length 15 characters</h6>
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="message" class="form-label"><h6>Text</h6></label>
+                          <textarea class="form-control" name="message" id="message" rows="15" maxlength="15000"></textarea>
+                          <h6 class="my-invalid-feedback">Maximum text length 10000 characters</h6>
+                          <h6 class="my-invalid-feedback">Minimum text length 30 characters</h6>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label"><h6>Tags</h6></label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter no more than 3 tags">
+                            <h6 class="my-invalid-feedback">You entered more than 3 tags</h6>
+                        </div>
+
+                        <div class="mb-3">
+                          <input type="submit" class="btn btn-primary" name="feedback-form" value="ASK!">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-3 mt-5">
+                    <div class="popular-tags">
+                        <h2>Popular Tags</h2>
+                        <ul>
+                            <li>Первый тег</li>
+                            <li>Второй тег</li>
+                            <li>Третий тег</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="best-members">
+                        <h2>Best Members</h2>
+                        <ul>
+                            <li>tourist</li>
+                            <li>jiangly</li>
+                            <li>ksun48</li>
+                            <li>Um_nik</li>
+                            <li>Benq</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>

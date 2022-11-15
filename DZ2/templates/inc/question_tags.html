@@ -1,0 +1,3 @@
+{% for tag in question.tags %}
+<a href="{% url 'tag' question_tag=tag %}">{{ tag }}</a>
+{% endfor %}

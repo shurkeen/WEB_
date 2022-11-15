@@ -1,0 +1,28 @@
+{% extends "inc/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<h2 class="mb-3">Log In</h2>
+<div class="my-login ms-3">
+    <form class="mb-4">
+        <div class="mb-3">
+            <label for="exampleInputLogin1" class="form-label"><h6>Login</h6></label>
+            <input class="form-control" id="exampleInputLogin1" placeholder="Enter your login there">
+            <h6 class="my-invalid-feedback">Sorry, but there is no user with this login</h6>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"><h6>Password</h6></label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="**********">
+            <h6 class="my-invalid-feedback">Sorry, wrong password!</h6>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Log in!</button>
+    </form>
+
+    <a href="signup">Create new account</a>
+</div>
+
+{% endblock %}

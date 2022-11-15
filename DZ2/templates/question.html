@@ -1,0 +1,45 @@
+{% extends "inc/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="one-question">
+    <div class="row">
+        <div class="col-2">
+            <div class="question_avatar">
+                <img src="{% static "img/img3.jpg" %}" alt="" />
+            </div>
+
+            <div class="nice-number">
+                <button>-</button>
+                <input type="number" value="100" style="width: 4ch;">
+                <button>+</button>
+            </div>   
+        </div>
+
+        <div class="col-10">
+            <h3 class="question-title">{{ question.title }}</h3>
+            <div class="question-text">{{ question.text }}</div>
+            <h6 style="display: inline-block;">Tags: </h6>
+
+            {% include 'inc/question_tags.html' %}
+        </div>
+    </div>
+    <div style="border-top: 3px solid; margin-top: 20px; border-radius: 30%;"></div>
+</div>
+
+{% for answer in answers %}
+    {% include 'inc/answer_item.html' %}
+{% endfor %}
+
+{% include 'inc/paginator.html' %}
+
+<div style="border-top: 3px solid; margin-top: 20px; border-radius: 30%; margin-bottom: 20px;"></div>
+
+<div class="form-outline mb-2">
+    <textarea class="form-control" id="textAreaExample1" rows="4" placeholder="Enter your answer here."></textarea>
+</div>
+<button type="submit" class="btn btn-primary btn-block mb-4">Answer</button>
+
+{% endblock %}

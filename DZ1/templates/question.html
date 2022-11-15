@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sticky Footer Navbar Template · Bootstrap v5.2</title>
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../static/css/style.css" rel="stylesheet"> 
+    
+</head>
+
+
+
+<body class="d-flex flex-column h-100">
+
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="#">Heap Overflow</a>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <button class="btn btn-outline-success" id="no-wrap" type="submit">Ask new question</button>
+
+                    <form class="d-flex form_search me-auto" role="search">
+                        <input class="form-control me-2" type="search" size=85 placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+
+                    <div class="my-userblock" id="no-wrap" >
+                        <a href="#" style="margin-right:10px;">log in</a>
+                        <a href="#">register</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    <div class="one-question">
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="question_avatar">
+                                    <img src="../static/img/img2.jpg" alt="" />
+                                </div>
+
+                                <div class="nice-number">
+                                    <button>-</button>
+                                    <input type="number" value="100" style="width: 4ch;">
+                                    <button>+</button>
+                                </div>   
+                            </div>
+
+                            <div class="col-10">
+                                <h3 class="question-title">Question 1</h3>
+                                <div class="question-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, ut eaque, voluptatem labore incidunt placeat, nostrum quidem amet ipsam corporis suscipit temporibus expedita architecto! Nemo, vel libero in omnis neque amet fuga. In numquam tenetur doloribus accusantium, delectus neque incidunt eum aliquid libero ipsam ipsum! Sed quas veritatis reiciendis sit, consequuntur reprehenderit ut eius dolor voluptate in totam obcaecati id?</div>
+                                <h6 style="display: inline-block;">Tags: </h6>
+                                <a href="#">C++</a>
+                                <a href="#">Python</a>
+                            </div>
+                        </div>
+                        <div style="border-top: 3px solid; margin-top: 20px; border-radius: 30%;"></div>
+                    </div>
+
+                    <div class="question">
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="question_avatar">
+                                    <img src="../static/img/img3.jpg" alt="" />
+                                </div>
+
+                                <div class="nice-number">
+                                    <button>-</button>
+                                    <input type="number" value="100" style="width: 4ch;">
+                                    <button>+</button>
+                                </div>
+                            </div>
+
+                            <div class="col-10">
+                                <div class="question-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem obcaecati laudantium, eum numquam tenetur quam, nihil consequuntur minima, eos reiciendis quo laborum fugit minus? Eaque dicta harum sint, aperiam, neque obcaecati provident dolores nulla a dignissimos porro nam blanditiis veniam cumque nisi! Molestiae dolores dicta autem ratione suscipit quis iusto?</div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">Correct!</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="question_avatar">
+                                    <img src="../static/img/img4.jpg" alt="" />
+                                </div>
+
+                                <div class="nice-number">
+                                    <button>-</button>
+                                    <input type="number" value="100" style="width: 4ch;">
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="col-10">
+                                <div class="question-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, vitae! Enim reprehenderit omnis sequi? Debitis iusto inventore minus nihil eos suscipit porro animi, dolore consequuntur tempora alias dolor hic qui quisquam distinctio, fugit ullam. Corrupti nobis repudiandae provident in. Dolores nostrum iusto necessitatibus voluptate dicta fuga voluptatum delectus ab a!</div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">Correct!</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav aria-label="Page navigation example" class="mt-4">
+                        <ul class="pagination">
+                          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+
+                    <div style="border-top: 3px solid; margin-top: 20px; border-radius: 30%; margin-bottom: 20px;"></div>
+
+                    <div class="form-outline mb-2">
+                        <textarea class="form-control" id="textAreaExample1" rows="4" placeholder="Enter your answer here."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block mb-4">Answer</button>
+                    
+                </div>
+
+
+                <div class="col-3 mt-5">
+                    <div class="popular-tags">
+                        <h2>Popular Tags</h2>
+                        <ul>
+                            <li>Первый тег</li>
+                            <li>Второй тег</li>
+                            <li>Третий тег</li>
+                        </ul>
+                    </div>
+                    <div class="best-members">
+                        <h2>Best Members</h2>
+                        <ul>
+                            <li>tourist</li>
+                            <li>jiangly</li>
+                            <li>ksun48</li>
+                            <li>Um_nik</li>
+                            <li>Benq</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>

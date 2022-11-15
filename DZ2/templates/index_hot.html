@@ -1,0 +1,17 @@
+{% extends "inc/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<h2>Hot Questions</h2>
+<a href="{% url 'index' %}">New questions</a>
+
+{% for question in questions %}
+    {% include 'inc/question_item.html' %}
+{% endfor %}
+
+
+{% include 'inc/paginator.html' %}
+
+{% endblock %}

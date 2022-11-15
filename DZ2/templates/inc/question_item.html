@@ -1,0 +1,25 @@
+{% load static %}
+
+<div class="question">
+    <div class="row">
+        <div class="col-2">
+            <div class="question_avatar">
+                <img src="{% static "img/img3.jpg" %}" alt="" />
+            </div>
+
+            <div class="nice-number">
+                <button>-</button>
+                <input type="number" value="100" style="width: 4ch;">
+                <button>+</button>
+            </div>   
+        </div>
+
+        <div class="col-10">
+            <a href = "{% url 'question' question_idx=question.idx %}"><h3 class="question-title">{{ question.title }}</h3></a>
+            <div class="question-text">{{ question.text }}</div>
+            <a href="{% url 'question' question_idx=question.idx %}" style="margin-right: 20px;">answer({{ question.answers_number }})</a>
+            <h6 style="display: inline-block;">Tags: </h6>
+            {% include 'inc/question_tags.html' %}
+        </div>
+    </div>
+</div>
