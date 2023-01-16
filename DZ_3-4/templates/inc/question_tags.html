@@ -1,0 +1,7 @@
+{% for tag in question.tags.all %}
+    {% if tag.title == "" %}
+        <a href="{% url 'tag' tag_id="no_tags" %}">no_tags</a>
+    {% else %}
+        <a href="{% url 'tag' tag_id=tag.title %}">{{ tag.title }}</a>
+    {% endif %}
+{% endfor %}

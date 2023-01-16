@@ -1,0 +1,19 @@
+<!doctype html>
+
+{% extends "inc/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="mt-4 mb-2">
+    <span class="fs-2 pe-5"> Tag : <span class="tag"> {{ tag }} </span> </span>
+</div>
+
+{% for question in page.object_list %}
+    {% include "inc/question_item.html" %}
+{% endfor %}
+
+
+{% include "inc/paggination.html" %}
+
+{% endblock %}

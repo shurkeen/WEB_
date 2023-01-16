@@ -1,0 +1,13 @@
+<div class="mt-4 mb-2">
+    <span class="fs-2 pe-5">Register</span>
+</div>
+
+{% load bootstrap5 %}
+
+<form action="{% url 'register' %}" method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="my-3 btn btn-primary">Register</button>
+    {% endbuttons %}
+</form> 

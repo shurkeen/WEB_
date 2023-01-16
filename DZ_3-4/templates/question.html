@@ -1,0 +1,39 @@
+<!doctype html>
+
+{% extends "inc/base.html"%}
+
+{% block content %}
+
+<div class="mt-4 mb-2">
+    <span class="fs-2 pe-5">Question</span> 
+</div>
+
+{% include "inc/question_item.html" %}
+
+{% load bootstrap5 %}
+
+{% if request.user.is_authenticated %}
+    <form action="{% url 'question' question_id=question.id %}" method="post" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons %}
+            <button type="submit" class="btn btn-primary mb-3 ps-5 pe-5">Answer</button>
+        {% endbuttons %}
+    </form> 
+
+{% else %}
+    <a href="{% url "login" %}?continue={{request.path}}" class="btn btn-outline-warning"> Войдите в систему для отправки ответа </a>
+{% endif %}
+
+<p class="divider-text"><span class="bg-light">ANSWERS</span></p>
+
+
+<!-- Answer card -->
+{% for answer in page.object_list %}
+    {% include "inc/answer_item.html" %}
+{% endfor %}
+
+{% include "inc/paggination.html" %}
+
+{% endblock %}
+                

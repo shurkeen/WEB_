@@ -1,0 +1,13 @@
+<div class="mt-4 mb-2">
+    <span class="fs-2 pe-5">New question</span>
+</div>
+
+{% load bootstrap5 %}
+
+<form action="{% url 'ask' %}" method="post" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary mb-3 ps-5 pe-5">Ask</button>
+    {% endbuttons %}
+</form> 

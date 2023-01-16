@@ -1,0 +1,14 @@
+<div class="mt-4 mb-2 pb-3">
+    <span class="fs-2 pe-5">Login</span>
+</div> 
+
+{% load bootstrap5 %}
+
+<form action="{% url 'login' %}?continue={{request.GET.continue}}" method="post" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Log in!</button>
+        <a type="button" href="{% url 'register' %}" style="color: #0d6efdd9" class="mx-2 px-3 btn btn-outline-light">Create new account</a>
+    {% endbuttons %}
+  </form>

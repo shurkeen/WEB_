@@ -1,0 +1,37 @@
+{% load static %}
+{% load app_filters %}
+
+<div class="question">
+    <div class="row">
+        <div class="col-2">
+
+            <div class="row">
+                <div class="col-4">
+                    {% if answer|isLikeUpAnswer:request.user.profile %}
+                        <button class="fs-3 button-likes like-answer like-up" data-id="{{answer.id}}">{{ answer.likeanswer_set.all.count }}</button>
+                    {% else %}
+                        <button class="fs-3 button-likes like-answer" data-id="{{answer.id}}">{{ answer.likeanswer_set.all.count }}</button>
+                    {% endif %}
+                </div>
+
+                <div class="col-8">
+                    <div class="question_avatar">
+                        <img src="{{ answer.author.user.profile.avatar.url }}" alt="Avatar" />
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-10">
+            
+            <div class="question-text">{{ answer.text }}</div>
+
+            {% if answer.is_correct %}
+            <div type="button" class="correct-button btn btn-success" id="{{answer.id}}" data-id="{{answer.id}}"> Correct </div>
+            {% else %}
+                <div type="button" class="correct-button btn btn-light" id="{{answer.id}}" data-id="{{answer.id}}"> Correct </div>
+            {% endif %}
+
+        </div>
+    </div>
+</div>

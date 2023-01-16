@@ -1,0 +1,16 @@
+<div class="mt-4 mb-2">
+    <span class="fs-2 pe-5">
+        {% if is_hot %}
+            <a class="fs-5 hot-question" href="{% url 'index' %}">New questions</a>
+        {% else %}
+            <a class="fs-5 hot-question" href="{% url 'index' %}"> <strong> New questions </strong> </a>
+        {% endif %}
+    </span>
+    <span class="hot-question">
+        {% if is_hot %}
+            <a class="fs-5 hot-question" href="{% url 'hot' %}"> <strong> Hot questions </strong> </a>
+        {% else %}
+            <a class="fs-5 hot-question" href="{% url 'hot' %}">Hot questions</a>
+        {% endif %}
+    </span>
+</div>

@@ -1,0 +1,17 @@
+<!doctype html>
+
+{% extends "inc/base.html" %}
+{% load static %}
+
+{% block content %}
+
+{% include "inc/choiсe_new_hot_questions.html" %}
+
+{% for question in page.object_list %}
+    {% include "inc/question_item.html" %}
+{% endfor %}
+
+
+{% include "inc/paggination.html" %}
+
+{% endblock %}

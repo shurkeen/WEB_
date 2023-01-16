@@ -1,0 +1,15 @@
+<div class="mt-4 mb-2">
+    <span class="fs-2 pe-5">Settings</span>
+</div>
+
+{% load bootstrap5 %}
+
+<form action="{% url 'settings' %}" method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <p class="form-label">Current avatar</p>
+    <img src="{{request.user.profile.avatar.url}}" width="400px" alt="Avatar">
+    {% buttons %}
+        <button type="submit" class="my-3 btn btn-primary">Save</button>
+    {% endbuttons %}
+</form> 
